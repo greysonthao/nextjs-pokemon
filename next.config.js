@@ -5,6 +5,6 @@ const nextConfig = {
 
 module.exports = {
   images: {
-    domains: ["https://jherr-pokemon.s3.us-west-1.amazonaws.com/"],
+    domains: ["jherr-pokemon.s3.us-west-1.amazonaws.com"],
   },
 };

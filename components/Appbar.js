@@ -5,7 +5,8 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-
+import Link from "next/link";
+/* import { Link } from "@mui/material"; */
 export default function DenseAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -19,9 +20,13 @@ export default function DenseAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" color="inherit" component="div">
-            Pokemon
-          </Typography>
+          <Link href="/">
+            <a>
+              <Typography variant="h6" color="inherit" component="div">
+                Pokemon
+              </Typography>
+            </a>
+          </Link>
         </Toolbar>
       </AppBar>
     </Box>

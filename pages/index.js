@@ -1,9 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Appbar from "../components/Appbar";
-import { Grid, Item, Box, Paper, Container, Typography } from "@mui/material";
+import Image from "next/image";
+import {
+  Grid,
+  /* Link, */
+  Item,
+  Box,
+  Paper,
+  Container,
+  Typography,
+} from "@mui/material";
 import { styled } from "@mui/material/styles";
 import React from "react";
 
@@ -32,18 +41,25 @@ export default function Home() {
   let pokemonElements = pokemon.map((pokemon) => {
     return (
       <Grid item xs={12} sm={6} md={3} key={pokemon.name}>
-        <Item>
-          <Typography variant="h5" marginBottom={1}>
-            {pokemon.name}
-          </Typography>
-
-          <img
-            src={`https://jherr-pokemon.s3.us-west-1.amazonaws.com/${pokemon.image}`}
-            alt=""
-            width="150"
-            height="150"
-          />
-        </Item>
+        <Link
+          href={`/pokemon/${pokemon.id}`}
+          underline="none"
+          textDecoration="none"
+        >
+          <a>
+            <Item>
+              <Typography variant="h5" marginBottom={1}>
+                {pokemon.name}
+              </Typography>
+              <Image
+                src={`https://jherr-pokemon.s3.us-west-1.amazonaws.com/${pokemon.image}`}
+                alt=""
+                width="150"
+                height="150"
+              />
+            </Item>
+          </a>
+        </Link>
       </Grid>
     );
   });
