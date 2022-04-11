@@ -3,7 +3,6 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Appbar from "../components/Appbar";
-import Image from "next/image";
 import {
   Grid,
   /* Link, */
@@ -51,11 +50,11 @@ export default function Home() {
               <Typography variant="h5" marginBottom={1}>
                 {pokemon.name}
               </Typography>
-              <Image
+              <img
                 src={`https://jherr-pokemon.s3.us-west-1.amazonaws.com/${pokemon.image}`}
                 alt=""
-                width="150"
-                height="150"
+                width={200}
+                height={200}
               />
             </Item>
           </a>

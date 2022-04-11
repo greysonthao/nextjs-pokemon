@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Head from "next/head";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import styles from "../../styles/Details.module.css";
 import Appbar from "../../components/Appbar";
@@ -70,11 +69,11 @@ export default function Details() {
                   textAlign: "center",
                 }}
               >
-                <Image
+                <img
                   src={`https://jherr-pokemon.s3.us-west-1.amazonaws.com/${pokemon.image}`}
                   alt={pokemon.name}
-                  width={200}
-                  height={200}
+                  width="200"
+                  height="200"
                 />
               </Paper>
               <Typography variant="body1" textAlign="center" marginTop={1}>
