@@ -1,8 +1,11 @@
 {
+  "homepage": "http://tougerthao.github.io/nextjs-pokemon",
   "name": "pokemon-v2",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "redeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

@@ -59,10 +59,11 @@ export default function Details() {
           sx={{
             flexGrow: 1,
             marginTop: 3,
+            marginBottom: 5,
           }}
         >
           <Grid container>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} sm={6}>
               <Paper
                 elevation={0}
                 sx={{
@@ -76,7 +77,7 @@ export default function Details() {
                   height={200}
                 />
               </Paper>
-              <Typography variant="paragraph" textAlign="center">
+              <Typography variant="body1" textAlign="center" marginTop={1}>
                 {pokemon.type.join(", ")}
               </Typography>
             </Grid>
